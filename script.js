@@ -142,10 +142,12 @@ function sendToGoogleSheets(leadData) {
    OFFER REDIRECT
    ========================================================= */
 function buildOfferUrl(leadData) {
+  // CPV Lab Pro reads its own subid macros (subid/subid2/subid3) from the
+  // incoming click URL and injects them into the Offer URL via {subid}/{subid2}/{subid3}.
   const url = new URL(CONFIG.OFFER_BASE_URL);
-  url.searchParams.set('aff_sub1', leadData.firstName);
-  url.searchParams.set('aff_sub2', leadData.lastName);
-  url.searchParams.set('aff_sub3', leadData.state);
+  url.searchParams.set('subid', leadData.firstName);
+  url.searchParams.set('subid2', leadData.lastName);
+  url.searchParams.set('subid3', leadData.state);
   return url.toString();
 }
 

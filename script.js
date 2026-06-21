@@ -17,7 +17,7 @@ const CONFIG = {
     o: '21851460',
     m: '20197',
     a: '764129',
-    mo: 'Prepop_to_Search_Results'
+    mo: 'Prepop_to_Animation'
   },
 
   // Vault Media: aff_click_id should be your click/tracking ID (from CPV Lab),

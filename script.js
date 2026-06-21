@@ -12,18 +12,9 @@ const CONFIG = {
   CPV_LAB_CLICK_PARAM: 'cpvclickid',
   CPV_LAB_POSTBACK_URL: 'PASTE_YOUR_CPV_LAB_PRO_POSTBACK_URL_HERE',
 
-  OFFER_BASE_URL: 'https://vaultmediainc10211905.o18.link/c',
-  OFFER_PARAMS: {
-    o: '21851460',
-    m: '20197',
-    a: '764129',
-    mo: 'Prepop_to_Animation'
-  },
-
-  // Vault Media: aff_click_id should be your click/tracking ID (from CPV Lab),
-  // sub_aff_id is your sub-affiliate ID. Fill these in before going live.
-  AFF_CLICK_ID: 'PASTE_YOUR_AFF_CLICK_ID_HERE',
-  SUB_AFF_ID: 'PASTE_YOUR_SUB_AFF_ID_HERE',
+  // CPV Lab Pro tracking link. It forwards to Vault Media with tracking already
+  // configured server-side. Only aff_sub1/aff_sub2/aff_sub3 need to be appended.
+  OFFER_BASE_URL: 'https://jobmoz24.com/base2.php',
 
   REDIRECT_DELAY_MS: 2000
 };
@@ -152,14 +143,9 @@ function sendToGoogleSheets(leadData) {
    ========================================================= */
 function buildOfferUrl(leadData) {
   const url = new URL(CONFIG.OFFER_BASE_URL);
-  Object.entries(CONFIG.OFFER_PARAMS).forEach(([key, value]) => {
-    url.searchParams.set(key, value);
-  });
   url.searchParams.set('aff_sub1', leadData.firstName);
   url.searchParams.set('aff_sub2', leadData.lastName);
   url.searchParams.set('aff_sub3', leadData.state);
-  url.searchParams.set('aff_click_id', leadData.click_id || CONFIG.AFF_CLICK_ID);
-  url.searchParams.set('sub_aff_id', CONFIG.SUB_AFF_ID);
   return url.toString();
 }
 

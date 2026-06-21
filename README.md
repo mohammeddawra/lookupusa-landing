@@ -35,10 +35,9 @@ lookupusa-landing/
 3. **CPV Lab Pro**
    - Replace `CPV_LAB_POSTBACK_URL` placeholder in `script.js` with your campaign tracking URL.
 
-4. **Vault Media offer parameters**
-   - Replace `AFF_CLICK_ID` in `script.js` with your Vault Media click/tracking ID.
-   - Replace `SUB_AFF_ID` in `script.js` with your sub-affiliate ID.
-   - `aff_sub1`/`aff_sub2`/`aff_sub3` (first name, last name, state) are filled automatically from the form.
+4. **Offer redirect**
+   - Visitors are redirected to the CPV Lab Pro tracking link (`OFFER_BASE_URL` in `script.js`, currently `https://jobmoz24.com/base2.php`), which forwards to Vault Media with tracking already configured.
+   - `aff_sub1`/`aff_sub2`/`aff_sub3` (first name, last name, state) are appended automatically from the form.
 
 5. **Deploy to GitHub Pages**
    - Push this repo to GitHub.

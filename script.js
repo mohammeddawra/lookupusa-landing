@@ -20,6 +20,11 @@ const CONFIG = {
     mo: 'Prepop_to_Search_Results'
   },
 
+  // Vault Media: aff_click_id should be your click/tracking ID (from CPV Lab),
+  // sub_aff_id is your sub-affiliate ID. Fill these in before going live.
+  AFF_CLICK_ID: 'PASTE_YOUR_AFF_CLICK_ID_HERE',
+  SUB_AFF_ID: 'PASTE_YOUR_SUB_AFF_ID_HERE',
+
   REDIRECT_DELAY_MS: 2000
 };
 
@@ -153,7 +158,8 @@ function buildOfferUrl(leadData) {
   url.searchParams.set('aff_sub1', leadData.firstName);
   url.searchParams.set('aff_sub2', leadData.lastName);
   url.searchParams.set('aff_sub3', leadData.state);
-  if (leadData.click_id) url.searchParams.set('aff_sub4', leadData.click_id);
+  url.searchParams.set('aff_click_id', leadData.click_id || CONFIG.AFF_CLICK_ID);
+  url.searchParams.set('sub_aff_id', CONFIG.SUB_AFF_ID);
   return url.toString();
 }
 

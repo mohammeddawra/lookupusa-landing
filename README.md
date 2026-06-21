@@ -35,11 +35,16 @@ lookupusa-landing/
 3. **CPV Lab Pro**
    - Replace `CPV_LAB_POSTBACK_URL` placeholder in `script.js` with your campaign tracking URL.
 
-4. **Deploy to GitHub Pages**
+4. **Vault Media offer parameters**
+   - Replace `AFF_CLICK_ID` in `script.js` with your Vault Media click/tracking ID.
+   - Replace `SUB_AFF_ID` in `script.js` with your sub-affiliate ID.
+   - `aff_sub1`/`aff_sub2`/`aff_sub3` (first name, last name, state) are filled automatically from the form.
+
+5. **Deploy to GitHub Pages**
    - Push this repo to GitHub.
    - Settings → Pages → deploy from `main` branch, root folder.
 
-5. **Cloudflare DNS**
+6. **Cloudflare DNS**
    - Point `lookupusa.online` CNAME to `<username>.github.io`.
    - Enable "Proxied" for security headers / caching.
 

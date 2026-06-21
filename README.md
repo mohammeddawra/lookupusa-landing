@@ -2,7 +2,7 @@
 
 Landing page for the Instant Checkmate USA (People Search / Background Check) CPA offer.
 
-- **Network:** Vault Media — Offer ID 21851460 — $65 CPA — USA only
+- **Network:** Vault Media (Offer ID 21851460, $65 CPA, USA only)
 - **Domain:** lookupusa.online
 - **Hosting:** GitHub Pages (static) + Cloudflare DNS
 - **Tracking:** Facebook Pixel, CPV Lab Pro, Google Apps Script lead capture

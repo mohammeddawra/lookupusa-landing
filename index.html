@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LookupUSA — Find People & Verify Public Records</title>
+<meta name="description" content="Search public records to reconnect with friends, verify information, and learn more about people across the USA.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loader-spinner"></div>
+  <p>Searching public records...</p>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Lookup<span>USA</span></a>
+    <div class="header-badge">🔒 Secure &amp; Confidential</div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="hero-tag">Trusted Public Records Search</span>
+      <h1>Reconnect With Anyone in the USA</h1>
+      <p class="hero-sub">Search billions of public records to verify information, find old friends, and learn more about people in your life — fast, private, and easy.</p>
+      <div class="live-counter">
+        <span class="counter-dot"></span>
+        <span><strong id="liveCounter">0</strong> searches run today</span>
+      </div>
+    </div>
+
+    <div class="search-card" id="searchCard">
+      <h2>Start Your Search</h2>
+      <form id="leadForm" autocomplete="off">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state" name="state" required>
+            <option value="" disabled selected>Select a State</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary btn-block" id="submitBtn">
+          Search Now <span class="arrow">→</span>
+        </button>
+        <p class="form-disclaimer">By clicking Search Now, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Badges -->
+<section class="trust-bar">
+  <div class="container trust-inner">
+    <div class="trust-item"><span class="trust-icon">🛡️</span> SSL Secured</div>
+    <div class="trust-item"><span class="trust-icon">⭐</span> Highly Rated by Users</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span> Privacy Protected</div>
+    <div class="trust-item"><span class="trust-icon">✅</span> BBB Accredited Partners</div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works reveal">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Three simple steps to get the information you're looking for.</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-number">1</div>
+        <h3>Enter a Name</h3>
+        <p>Provide a first name, last name, and state to begin your search.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-number">2</div>
+        <h3>We Search Records</h3>
+        <p>Our partner scans public records and databases across the USA.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-number">3</div>
+        <h3>View Your Report</h3>
+        <p>Access a detailed report with the public information available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What You Can Find -->
+<section class="what-you-find reveal">
+  <div class="container what-grid">
+    <div class="what-text">
+      <h2 class="section-title">What You Can Find</h2>
+      <ul class="check-list">
+        <li>✔ Possible contact information</li>
+        <li>✔ Address history</li>
+        <li>✔ Social media profiles</li>
+        <li>✔ Relatives &amp; associates</li>
+        <li>✔ Public records on file</li>
+      </ul>
+    </div>
+    <div class="report-preview">
+      <div class="report-card">
+        <div class="report-header">
+          <div class="report-avatar"></div>
+          <div>
+            <div class="report-name-line"></div>
+            <div class="report-sub-line"></div>
+          </div>
+        </div>
+        <div class="report-row"><span>Address History</span><span class="blur-text">Available</span></div>
+        <div class="report-row"><span>Contact Info</span><span class="blur-text">Available</span></div>
+        <div class="report-row"><span>Relatives</span><span class="blur-text">Available</span></div>
+        <div class="report-row"><span>Public Records</span><span class="blur-text">Available</span></div>
+        <div class="report-overlay">Unlock Full Report</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Marquee -->
+<section class="testimonials reveal">
+  <div class="container">
+    <h2 class="section-title">What People Are Saying</h2>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="testimonial-card"><p>"I was able to reconnect with a childhood friend I lost touch with years ago."</p><span>— Jennifer R.</span></div>
+      <div class="testimonial-card"><p>"Quick and simple to use. Found the information I needed in minutes."</p><span>— Mark T.</span></div>
+      <div class="testimonial-card"><p>"Great way to verify information before meeting someone new."</p><span>— Ashley P.</span></div>
+      <div class="testimonial-card"><p>"Helped me track down a distant relative for our family tree."</p><span>— Carlos M.</span></div>
+      <div class="testimonial-card"><p>"Simple search, easy report, exactly what I needed."</p><span>— Denise W.</span></div>
+      <div class="testimonial-card"><p>"I was able to reconnect with a childhood friend I lost touch with years ago."</p><span>— Jennifer R.</span></div>
+      <div class="testimonial-card"><p>"Quick and simple to use. Found the information I needed in minutes."</p><span>— Mark T.</span></div>
+      <div class="testimonial-card"><p>"Great way to verify information before meeting someone new."</p><span>— Ashley P.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency CTA -->
+<section class="urgency-cta reveal">
+  <div class="container urgency-inner">
+    <h2>Ready to Find Out More?</h2>
+    <p>Join thousands of people who search public records every day.</p>
+    <button class="btn-primary btn-large" onclick="document.getElementById('searchCard').scrollIntoView({behavior:'smooth'}); document.getElementById('firstName').focus();">
+      Start My Search <span class="arrow">→</span>
+    </button>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq reveal">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Is this service legal? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Yes. We search publicly available records in compliance with applicable laws. Reports may not be used for FCRA-regulated purposes such as credit, employment, or tenant screening.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How accurate is the information? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Information is compiled from public and proprietary databases. Accuracy may vary based on data availability and recency.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is my search confidential? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Yes, your search activity is kept private and is not shared with the person you search for.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What information do I need to search? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Just a first name, last name, and state to get started.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="fcra-disclaimer">
+      This site is not a Consumer Reporting Agency as defined by the Fair Credit Reporting Act (FCRA). Information provided cannot be used for credit, employment, insurance, tenant screening, or any other purpose covered under the FCRA.
+    </p>
+    <p class="affiliate-disclosure">This page may receive compensation for leads generated through partner offers.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> LookupUSA. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Exit Intent Popup -->
+<div id="exitPopup" class="exit-popup-overlay">
+  <div class="exit-popup">
+    <button class="exit-popup-close" id="exitPopupClose">×</button>
+    <h3>Wait — Don't Miss This!</h3>
+    <p>Complete your search now and get instant access to available public records.</p>
+    <button class="btn-primary btn-block" id="exitPopupCta">Continue My Search</button>
+  </div>
+</div>
+
+<div id="toastContainer" class="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
